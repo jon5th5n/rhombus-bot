@@ -71,6 +71,34 @@ module.exports =
         return(numi)
     },
 
+    formatString: function(string, lnLen)
+    {
+        let lines = []
+        let seperate = []
+        const stringLen = string.length
+        for(j = 0; j <= stringLen; j += lnLen) //25
+        {
+            seperate = []
+            for(i = 0; i <= lnLen; i++) //5
+            {
+                if(string.charAt(i) === ',' || string.charAt(i) === '.' || string.charAt(i) === '!' || string.charAt(i) === '?')
+                {
+                    seperate.push(i)
+                }
+            }
+            if(seperate.length > 0)
+            {
+                if(Math.max.apply(null, seperate)+2 > lnLen/2)
+                {
+                    lines.push(string.slice(0, Math.max.apply(null, seperate)+2))
+                    string = string.slice(Math.max.apply(null, seperate)+2)
+                }
+            }
+        }
+        lines.push(string)
+        return lines.join('\n')
+    },
+
     catchMessageFrom: function(userid, client)
     {
         return new Promise((resolve, reject) =>

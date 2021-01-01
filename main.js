@@ -1,8 +1,9 @@
 const { memory } = require('console');
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const wiki = require('wikijs').default
 
-const { mentionIsRole, mentionToId, idToMention, isMention, whiteFrameNumber, calculateSumInScope, seperateNumber } = require('./functions');
+const { mentionIsRole, mentionToId, idToMention, isMention, whiteFrameNumber, calculateSumInScope, seperateNumber, formatString } = require('./functions');
 
 const prefix = '#';
 
@@ -18,9 +19,9 @@ for(const file of commandFiles)
 
 client.once('ready', () => 
 {
+    console.log(formatString('1, 2, 3 4 5 6 7 8 9 ', 20))
     console.log('Bot is online!');
 });
-
 
 client.on('message', message =>
 {
@@ -66,6 +67,10 @@ client.on('message', message =>
     {
         client.commands.get('skip').execute(message, args, Discord);
     }
+    else if(instruction == 'wiki')
+    {
+        client.commands.get('wiki').execute(message, args, Discord);
+    }
 });
 
 
@@ -74,4 +79,4 @@ client.on('message', message =>
 
 
 
-client.login(process.env.token);
+client.login('NzkxMzAyODY2NTA5ODg5NTg3.X-NMOQ.OB20zLdHxOEwO8_QJ30uKr4QzjQ');
