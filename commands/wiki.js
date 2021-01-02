@@ -12,7 +12,7 @@ module.exports =
 
         wiki().find(args[0]).then(page => page.summary())
         .then(summary => {
-            embed.addField('Summary: ', formatString(summary, 85))
+            embed.addField('Summary: ', formatString(summary, 75))
             message.channel.send(embed)
         })
     }
