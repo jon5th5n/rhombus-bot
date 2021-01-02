@@ -19,7 +19,6 @@ for(const file of commandFiles)
 
 client.once('ready', () => 
 {
-    console.log(formatString('1, 2, 3 4 5 6 7 8 9 ', 20))
     console.log('Bot is online!');
 });
 
@@ -70,6 +69,10 @@ client.on('message', message =>
     else if(instruction == 'wiki')
     {
         client.commands.get('wiki').execute(message, args, Discord);
+    }
+    else if(instruction == 'wikiimage')
+    {
+        client.commands.get('wikiimage').execute(message, args, Discord, client);
     }
 });
 
