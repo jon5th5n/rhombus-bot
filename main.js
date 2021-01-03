@@ -74,6 +74,10 @@ client.on('message', message =>
     {
         client.commands.get('wikiimage').execute(message, args, Discord, client);
     }
+    else if(instruction == 'calc')
+    {
+        client.commands.get('calc').execute(message, args);
+    }
 });
 
 
