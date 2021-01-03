@@ -27,8 +27,7 @@ module.exports =
                 .setAuthor(`${songQueue[message.guild.id][0].author.name}`)
                 .setThumbnail(`${songQueue[message.guild.id][0].thumbnail}`)
                 .addFields(
-                    {name: 'Duration', value: `${songQueue[message.guild.id][0].duration}`, inline: true},
-                    {name: 'Requested By', value: message.author, inline: true}
+                    {name: 'Duration', value: `${songQueue[message.guild.id][0].duration}`, inline: true}
                 )
         
                 message.channel.send(embed)

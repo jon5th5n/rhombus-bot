@@ -38,7 +38,7 @@ module.exports =
             .setThumbnail(`${songQueue[message.guild.id][0].thumbnail}`)
             .addFields(
                 {name: 'Duration', value: `${songQueue[message.guild.id][0].timestamp}`, inline: true},
-                {name: 'Requested By', value: messagei.author, inline: true},
+                {name: 'Requested By', value: messagei.member, inline: true},
             )
             .setFooter(`Uploaded ${songQueue[message.guild.id][0].ago}  |  Views: ` + seperateNumber(songQueue[message.guild.id][0].views))
 
