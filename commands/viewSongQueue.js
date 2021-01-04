@@ -13,6 +13,8 @@ module.exports =
 
         let text = ''
 
+        if(songQueue[message.guild.id].length <= 0) return message.channel.send(':x: There is nothing queued right now!')
+
         for(i in songQueue[message.guild.id])
         {
             text = text + `${parseInt(i)+1}. \ \ \ ${songQueue[message.guild.id][i].title}\n\n`
