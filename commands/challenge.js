@@ -1,5 +1,6 @@
 const { Client } = require("discord.js");
 const { mentionIsRole, mentionToId, idToMention, isMention, catchMessageFrom, whiteFrameNumber, equals3, calculateSumInScope } = require("../functions");
+const board = require("../data/tictactoeBoard");
 
 module.exports = 
 {
@@ -140,15 +141,20 @@ module.exports =
                     [opponent] : crossEmote,
                     [challenger] : circleEmote
                 }
-                let board = [
-                    [whiteFrameNumber[0], whiteFrameNumber[1], whiteFrameNumber[2]],
-                    [whiteFrameNumber[3], whiteFrameNumber[4], whiteFrameNumber[5]],
-                    [whiteFrameNumber[6], whiteFrameNumber[7], whiteFrameNumber[8]],
-                ]
-                let available = []
-                for(i = 0; i < board.length; i++)
+
+                if(!(board.hasOwnProperty(message.guild.id)))
                 {
-                    for(j = 0; j < board.length; j++)
+                    board[message.guild.id] = [
+                        [whiteFrameNumber[0], whiteFrameNumber[1], whiteFrameNumber[2]],
+                        [whiteFrameNumber[3], whiteFrameNumber[4], whiteFrameNumber[5]],
+                        [whiteFrameNumber[6], whiteFrameNumber[7], whiteFrameNumber[8]],
+                    ]
+                }
+
+                let available = []
+                for(i = 0; i < board[message.guild.id].length; i++)
+                {
+                    for(j = 0; j < board[message.guild.id].length; j++)
                     {
                         available.push([i, j])
                     }
@@ -160,9 +166,9 @@ module.exports =
                 .setURL('https://de.wikipedia.org/wiki/Tic-Tac-Toe')
                 .setDescription('Turn: ' + idToMention(opponent))
                 .addFields(
-                    {name: '\u200b', value: board[0][0] + '\n\u200b\n' + board[1][0] + '\n\u200b\n' + board[2][0], inline: true},
-                    {name: '\u200b', value: board[0][1] + '\n\u200b\n' + board[1][1] + '\n\u200b\n' + board[2][1], inline: true},
-                    {name: '\u200b', value: board[0][2] + '\n\u200b\n' + board[1][2] + '\n\u200b\n' + board[2][2], inline: true}
+                    {name: '\u200b', value: board[message.guild.id][0][0] + '\n\u200b\n' + board[message.guild.id][1][0] + '\n\u200b\n' + board[message.guild.id][2][0], inline: true},
+                    {name: '\u200b', value: board[message.guild.id][0][1] + '\n\u200b\n' + board[message.guild.id][1][1] + '\n\u200b\n' + board[message.guild.id][2][1], inline: true},
+                    {name: '\u200b', value: board[message.guild.id][0][2] + '\n\u200b\n' + board[message.guild.id][1][2] + '\n\u200b\n' + board[message.guild.id][2][2], inline: true}
                 )
                 
                 message.channel.send(tttEmbed)
@@ -189,9 +195,9 @@ module.exports =
 
                         let row = (Math.ceil(answer/3) - 1)
                         let col = calculateSumInScope((answer % 3), -1, 0, 2)
-                        if(whiteFrameNumber.includes(board[row][col]))
+                        if(whiteFrameNumber.includes(board[message.guild.id][row][col]))
                         {
-                            board[row][col] = emoteOfPlayer[turningPlayer]
+                            board[message.guild.id][row][col] = emoteOfPlayer[turningPlayer]
                         }
                         else
                         {   
@@ -200,11 +206,11 @@ module.exports =
                             return
                         }                   
                         available = []
-                        for(i = 0; i < board.length; i++)
+                        for(i = 0; i < board[message.guild.id].length; i++)
                         {
-                            for(j = 0; j < board.length; j++)
+                            for(j = 0; j < board[message.guild.id].length; j++)
                             {
-                                if(whiteFrameNumber.includes(board[i][j]))
+                                if(whiteFrameNumber.includes(board[message.guild.id][i][j]))
                                 {
                                     available.push([i, j])
                                 }
@@ -212,16 +218,17 @@ module.exports =
                         }
                         if(turningPlayer === opponent) tttEmbed.description = 'Turn: ' + idToMention(challenger)
                         else tttEmbed.description = 'Turn: ' + idToMention(opponent)
-                        tttEmbed.fields[0].value = board[0][0] + '\n\u200b\n' + board[1][0] + '\n\u200b\n' + board[2][0]
-                        tttEmbed.fields[1].value = board[0][1] + '\n\u200b\n' + board[1][1] + '\n\u200b\n' + board[2][1]
-                        tttEmbed.fields[2].value = board[0][2] + '\n\u200b\n' + board[1][2] + '\n\u200b\n' + board[2][2]
+                        tttEmbed.fields[0].value = board[message.guild.id][0][0] + '\n\u200b\n' + board[message.guild.id][1][0] + '\n\u200b\n' + board[message.guild.id][2][0]
+                        tttEmbed.fields[1].value = board[message.guild.id][0][1] + '\n\u200b\n' + board[message.guild.id][1][1] + '\n\u200b\n' + board[message.guild.id][2][1]
+                        tttEmbed.fields[2].value = board[message.guild.id][0][2] + '\n\u200b\n' + board[message.guild.id][1][2] + '\n\u200b\n' + board[message.guild.id][2][2]
 
                         message.channel.send(tttEmbed)
-                        const winner = await checkWinner(board, available)
+                        const winner = await checkWinner(board[message.guild.id], available)
                         if(winner)
                         {
                             if(winner !== 'tie') message.channel.send(winner + ' ' + idToMention(turningPlayer) + ' won!')
                             else message.channel.send("It's a tie.")
+                            delete board[message.guild.id]
                         }
                     }
                     catch(err)
