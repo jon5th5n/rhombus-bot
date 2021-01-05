@@ -7,13 +7,13 @@ module.exports =
     {
         let num
 
-        if(typeof(args[0]) !== 'number') return message.channel.send(':x: You need to use numbers.')
+        if(typeof parseInt(args[0]) !== 'number') return message.channel.send(':x: You need to use numbers.')
 
-        if(args.length === 2) num = Math.random(args[0])
+        if(args.length === 2) num = Math.random(parseInt(args[0]))
         else if(args.length === 2)
         {
-            if(typeof(args[1]) !== 'number') return message.channel.send(':x: You need to use numbers.')
-            num = Math.random(args[0], args[1])
+            if(typeof parseInt(args[1]) !== 'number') return message.channel.send(':x: You need to use numbers.')
+            num = Math.random(parseInt(args[0]), parseInt(args[1]))
         }
 
         message.channel.send(num);
