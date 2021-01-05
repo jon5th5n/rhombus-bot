@@ -26,10 +26,9 @@ module.exports =
 
             message.channel.send(`:file_cabinet: Which of the ${images.length} images do you want to look at?`)
 
-            const answer = await catchMessageFrom(message.author.id, client)
+            const answer = await catchMessageFrom(message.author.id, message.guild.id, client)
             if(!(parseInt(answer) > 0 && parseInt(answer) <= images.length)) return message.channel.send(':x: You need to enter a valid number.')
             embed.setImage(images[parseInt(answer) - 1])
-            console.log(images[parseInt(answer) - 1])
 
             message.channel.send(embed)
         }

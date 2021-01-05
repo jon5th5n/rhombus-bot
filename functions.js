@@ -71,13 +71,13 @@ module.exports =
         return(numi)
     },
 
-    catchMessageFrom: function(userid, client)
+    catchMessageFrom: function(userid, guild, client)
     {
         return new Promise((resolve, reject) =>
         {
             client.on('message', message =>
             {
-                if(message.author.bot || message.author.id !== userid) return
+                if((message.author.bot || message.author.id !== userid) || message.guild.id !== guild) return
                 resolve(message.content)
             })
         })
