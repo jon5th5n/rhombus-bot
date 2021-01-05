@@ -78,6 +78,10 @@ client.on('message', message =>
     {
         client.commands.get('calc').execute(message, args);
     }
+    else if(instruction == 'random')
+    {
+        client.commands.get('random').execute(message, args);
+    }
 });
 
 
