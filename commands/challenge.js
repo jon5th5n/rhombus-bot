@@ -47,11 +47,11 @@ module.exports =
         const opponentUser = await message.guild.members.fetch(opponent).then(guildMember => guildMember.user)
         const game = args[1].toLowerCase();
         
-        // if(challenger === opponent)
-        // {
-        //     message.channel.send(':x: You can not play against yourself')
-        //     return
-        // }
+        if(challenger === opponent)
+        {
+            message.channel.send(':x: You can not play against yourself')
+            return
+        }
 
 
 
