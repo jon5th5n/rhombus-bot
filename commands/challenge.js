@@ -116,7 +116,6 @@ module.exports =
                                         const fieldBefore = tictactoeBoard[message.guild.id][i][j]
                                         tictactoeBoard[message.guild.id][i][j] = crossEmote
                                         const score = minimax(tictactoeBoard[message.guild.id], 0, false)
-                                        // console.log(score)
                                         tictactoeBoard[message.guild.id][i][j] = fieldBefore
                                         if(score > bestScore)
                                         {
@@ -438,14 +437,217 @@ module.exports =
             }
         } //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
-        else if(game === 'connectfour') //>>Connect Four>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+        else if(game === 'connectfour') //>>Connect Four>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
         {
             if(opponent === client.user.id) //==PvAI=====================================================================================================================================
             {
                 message.channel.send('You want to challange me to a game of Connect Four? So be it.')
-                return
+                
+                // let turningPlayer = opponent
+                // const redCircle = ':red_circle:'
+                // const blueCircle = ':blue_circle:'
+                // const emoteOfPlayer = {
+                //     [opponent] : redCircle,
+                //     [challenger] : blueCircle
+                // }
+                // let challengerStones = 21
+                // let opponentStones = 21
+
+                // if(!(connectfourBoard.hasOwnProperty(message.guild.id)))
+                // {
+                //     connectfourBoard[message.guild.id] = [
+                //         [':black_circle:', ':black_circle:', ':black_circle:', ':black_circle:', ':black_circle:', ':black_circle:'],
+                //         [':black_circle:', ':black_circle:', ':black_circle:', ':black_circle:', ':black_circle:', ':black_circle:'],
+                //         [':black_circle:', ':black_circle:', ':black_circle:', ':black_circle:', ':black_circle:', ':black_circle:'],
+                //         [':black_circle:', ':black_circle:', ':black_circle:', ':black_circle:', ':black_circle:', ':black_circle:'],
+                //         [':black_circle:', ':black_circle:', ':black_circle:', ':black_circle:', ':black_circle:', ':black_circle:'],
+                //         [':black_circle:', ':black_circle:', ':black_circle:', ':black_circle:', ':black_circle:', ':black_circle:'],
+                //         [':black_circle:', ':black_circle:', ':black_circle:', ':black_circle:', ':black_circle:', ':black_circle:']
+                //     ]
+                // }
+
+                // let cfEmbed = new Discord.MessageEmbed()
+                // .setColor('#F7740D')
+                // .setTitle('Connect Four')
+                // .setURL('https://en.wikipedia.org/wiki/Connect_Four')
+                // .setDescription('Turn: ' + idToMention(opponent))
+                // .addFields(
+                //     {name: '<:white_one:796153361283416105><:white_two:796153370721255434><:white_three:796153371320385576><:white_four:796153365896888350><:white_five:796153369793396766><:white_six:796153371211202612><:white_seven:796153366567845888>',
+                //     value:
+                //     '<:white_arrow_down:796153329980932106><:white_arrow_down:796153329980932106><:white_arrow_down:796153329980932106><:white_arrow_down:796153329980932106><:white_arrow_down:796153329980932106><:white_arrow_down:796153329980932106><:white_arrow_down:796153329980932106>' + '\n' +
+                //     connectfourBoard[message.guild.id][0][0] + connectfourBoard[message.guild.id][1][0] + connectfourBoard[message.guild.id][2][0] + connectfourBoard[message.guild.id][3][0] + connectfourBoard[message.guild.id][4][0] + connectfourBoard[message.guild.id][5][0] + connectfourBoard[message.guild.id][6][0] + '\n' +
+                //     connectfourBoard[message.guild.id][0][1] + connectfourBoard[message.guild.id][1][1] + connectfourBoard[message.guild.id][2][1] + connectfourBoard[message.guild.id][3][1] + connectfourBoard[message.guild.id][4][1] + connectfourBoard[message.guild.id][5][1] + connectfourBoard[message.guild.id][6][1] + '\n' +
+                //     connectfourBoard[message.guild.id][0][2] + connectfourBoard[message.guild.id][1][2] + connectfourBoard[message.guild.id][2][2] + connectfourBoard[message.guild.id][3][2] + connectfourBoard[message.guild.id][4][2] + connectfourBoard[message.guild.id][5][2] + connectfourBoard[message.guild.id][6][2] + '\n' +
+                //     connectfourBoard[message.guild.id][0][3] + connectfourBoard[message.guild.id][1][3] + connectfourBoard[message.guild.id][2][3] + connectfourBoard[message.guild.id][3][3] + connectfourBoard[message.guild.id][4][3] + connectfourBoard[message.guild.id][5][3] + connectfourBoard[message.guild.id][6][3] + '\n' +
+                //     connectfourBoard[message.guild.id][0][4] + connectfourBoard[message.guild.id][1][4] + connectfourBoard[message.guild.id][2][4] + connectfourBoard[message.guild.id][3][4] + connectfourBoard[message.guild.id][4][4] + connectfourBoard[message.guild.id][5][4] + connectfourBoard[message.guild.id][6][4] + '\n' +
+                //     connectfourBoard[message.guild.id][0][5] + connectfourBoard[message.guild.id][1][5] + connectfourBoard[message.guild.id][2][5] + connectfourBoard[message.guild.id][3][5] + connectfourBoard[message.guild.id][4][5] + connectfourBoard[message.guild.id][5][5] + connectfourBoard[message.guild.id][6][5]
+                // })
+                // .setFooter(opponentUser.username + ': ' + opponentStones + ' | ' + challengerUser.username + ': ' + challengerStones)
+                
+                // message.channel.send(cfEmbed)
+
+                // gameLoop()
+                // async function gameLoop()
+                // {
+                //     try
+                //     {
+                //         if(turningPlayer === opponent) //--AI's turn---------------------------------------------------------------------------------------------------------------------
+                //         {
+                //             let bestScore = -Infinity
+                //             let move;
+                //             for(let i = 0; i < connectfourBoard[message.guild.id].length; i++)
+                //             {
+                //                 let j = 0
+                //                 for(let f = connectfourBoard[message.guild.id][i].length - 1; f >= 0; f--)
+                //                 {
+                //                     if(!(connectfourBoard[message.guild.id][i][f] === ':black_circle:'))
+                //                     {
+                //                         j = i + 1
+                //                     }
+                //                 }
+                //                 const fieldBefore = connectfourBoard[message.guild.id][i][j]
+                //                 connectfourBoard[message.guild.id][i][j] = redCircle
+                //                 const score = minimax(connectfourBoard[message.guild.id], 0, false)
+                //                 connectfourBoard[message.guild.id][i][j] = fieldBefore
+                //                 if(score > bestScore)
+                //                 {
+                //                     bestScore = score
+                //                     move = {i, j}
+                //                 }
+                //             }
+                //             connectfourBoard[message.guild.id][move.i][move.j] = redCircle
+                //             opponentStones -= 1
+                //         }
+                //         else //--Player turn---------------------------------------------------------------------------------------------------------------------------------------------
+                //         {
+                //             const answer = await catchMessageFrom(turningPlayer, message.guild.id, client)
+                //             if(!(parseInt(answer) > 0 && parseInt(answer) <= 7))
+                //             {
+                //                 if(answer === 'stop')
+                //                 {
+                //                     message.channel.send(':exclamation: You stoped the game.')
+                //                 }
+                //                 else
+                //                 {
+                //                     message.channel.send(':x: You need to select a number between 1 and 7.')
+                //                     gameLoop()
+                //                 }
+                //                 return
+                //             }
+
+                //             let row = 0
+                //             for(let i = connectfourBoard[message.guild.id][answer - 1].length - 1; i >= 0; i--)
+                //             {
+                //                 if(!(connectfourBoard[message.guild.id][answer - 1][i] === ':black_circle:'))
+                //                 {
+                //                     row = i + 1
+                //                     if(row >= connectfourBoard[message.guild.id][answer - 1].length)
+                //                     {
+                //                         message.channel.send(':x: This column is full.')
+                //                         gameLoop()
+                //                     }
+                //                     break
+                //                 }
+                //             }
+
+                //             const piece = {
+                //                 col: answer - 1,
+                //                 row: row,
+                //                 emote: emoteOfPlayer[turningPlayer]
+                //             }
+
+                //             connectfourBoard[message.guild.id][piece.col][piece.row] = piece.emote
+                //             challengerStones -= 1
+                //         }
+
+                //         if(turningPlayer === opponent) cfEmbed.description = 'Turn: ' + idToMention(challenger)
+                //         else cfEmbed.description = 'Turn: ' + idToMention(opponent)
+                //         cfEmbed.fields[0].value = '<:white_arrow_down:796153329980932106><:white_arrow_down:796153329980932106><:white_arrow_down:796153329980932106><:white_arrow_down:796153329980932106><:white_arrow_down:796153329980932106><:white_arrow_down:796153329980932106><:white_arrow_down:796153329980932106>' + '\n' +
+                //                                     connectfourBoard[message.guild.id][0][5] + connectfourBoard[message.guild.id][1][5] + connectfourBoard[message.guild.id][2][5] + connectfourBoard[message.guild.id][3][5] + connectfourBoard[message.guild.id][4][5] + connectfourBoard[message.guild.id][5][5] + connectfourBoard[message.guild.id][6][5] + '\n' +
+                //                                     connectfourBoard[message.guild.id][0][4] + connectfourBoard[message.guild.id][1][4] + connectfourBoard[message.guild.id][2][4] + connectfourBoard[message.guild.id][3][4] + connectfourBoard[message.guild.id][4][4] + connectfourBoard[message.guild.id][5][4] + connectfourBoard[message.guild.id][6][4] + '\n' +
+                //                                     connectfourBoard[message.guild.id][0][3] + connectfourBoard[message.guild.id][1][3] + connectfourBoard[message.guild.id][2][3] + connectfourBoard[message.guild.id][3][3] + connectfourBoard[message.guild.id][4][3] + connectfourBoard[message.guild.id][5][3] + connectfourBoard[message.guild.id][6][3] + '\n' +
+                //                                     connectfourBoard[message.guild.id][0][2] + connectfourBoard[message.guild.id][1][2] + connectfourBoard[message.guild.id][2][2] + connectfourBoard[message.guild.id][3][2] + connectfourBoard[message.guild.id][4][2] + connectfourBoard[message.guild.id][5][2] + connectfourBoard[message.guild.id][6][2] + '\n' +
+                //                                     connectfourBoard[message.guild.id][0][1] + connectfourBoard[message.guild.id][1][1] + connectfourBoard[message.guild.id][2][1] + connectfourBoard[message.guild.id][3][1] + connectfourBoard[message.guild.id][4][1] + connectfourBoard[message.guild.id][5][1] + connectfourBoard[message.guild.id][6][1] + '\n' +
+                //                                     connectfourBoard[message.guild.id][0][0] + connectfourBoard[message.guild.id][1][0] + connectfourBoard[message.guild.id][2][0] + connectfourBoard[message.guild.id][3][0] + connectfourBoard[message.guild.id][4][0] + connectfourBoard[message.guild.id][5][0] + connectfourBoard[message.guild.id][6][0]
+                //         cfEmbed.footer.text = String(opponentUser.username + ': ' + opponentStones + ' | ' + challengerUser.username + ': ' + challengerStones)
+                //         message.channel.send(cfEmbed)
+
+                //         const winner = checkWinner(connectfourBoard[message.guild.id], opponentStones, challengerStones)
+                //         if(winner !== 'noone won')
+                //         {
+                //             if(winner !== 'tie') message.channel.send(winner + ' ' + idToMention(turningPlayer) + ' won!')
+                //             else message.channel.send("It's a tie.")
+                //             delete connectfourBoard[message.guild.id]
+                //         }
+                //         else
+                //         {
+                //             if(turningPlayer === opponent) turningPlayer = challenger
+                //             else turningPlayer = opponent
+                //             gameLoop()
+                //         }
+                //     }
+                //     catch(err)
+                //     {
+                //         console.log(err)
+                //     }
+                // }
+                // function minimax(boardi, depth, isMaximizing)
+                // {
+                //     const result = checkWinner(boardi, opponentStones, challengerStones)
+                //     if(result !== 'noone won')
+                //     {
+                //         let score
+                //         if(result === redCircle) score = 1
+                //         else if(result === blueCircle) score = -1
+                //         else if(result === 'tie') score = 0
+                //         return score
+                //     }
+
+                //     if(isMaximizing)
+                //     {
+                //         let bestScore = -Infinity
+                //         for(let i = 0; i < connectfourBoard[message.guild.id].length; i++)
+                //         {
+                //             let j = 0
+                //             for(let f = connectfourBoard[message.guild.id][i].length - 1; f >= 0; f--)
+                //             {
+                //                 if(!(connectfourBoard[message.guild.id][i][f] === ':black_circle:'))
+                //                 {
+                //                     j = i + 1
+                //                 }
+                //             }
+                //             const fieldBefore = connectfourBoard[message.guild.id][i][j]
+                //             connectfourBoard[message.guild.id][i][j] = redCircle
+                //             const score = minimax(connectfourBoard[message.guild.id], depth + 1, false)
+                //             connectfourBoard[message.guild.id][i][j] = fieldBefore
+                //             bestScore = Math.max(score, bestScore)
+                //         }
+                //         return bestScore
+                //     }
+                //     else
+                //     {
+                //         let bestScore = Infinity
+                //         for(let i = 0; i < connectfourBoard[message.guild.id].length; i++)
+                //         {
+                //             let j = 0
+                //             for(let f = connectfourBoard[message.guild.id][i].length - 1; f >= 0; f--)
+                //             {
+                //                 if(!(connectfourBoard[message.guild.id][i][f] === ':black_circle:'))
+                //                 {
+                //                     j = i + 1
+                //                 }
+                //             }
+                //             const fieldBefore = connectfourBoard[message.guild.id][i][j]
+                //             connectfourBoard[message.guild.id][i][j] = redCircle
+                //             const score = minimax(connectfourBoard[message.guild.id], depth + 1, true)
+                //             connectfourBoard[message.guild.id][i][j] = fieldBefore
+                //             bestScore = Math.min(score, bestScore)
+                //         }
+                //         return bestScore
+                //     }
+                // }
             }
-            else //==PvP=================================================================================================================================================================
+            else //==PvP==================================================================================================================================================================
             {
                 message.channel.send(idToMention(opponent) + ' you got challenged by ' + idToMention(challenger) + ' to play a game of Connect Four!');
                 message.channel.send('Do you want to participate?');
@@ -546,6 +748,11 @@ module.exports =
                                 if(!(connectfourBoard[message.guild.id][answer - 1][i] === ':black_circle:'))
                                 {
                                     row = i + 1
+                                    if(row >= connectfourBoard[message.guild.id][answer - 1].length)
+                                    {
+                                        message.channel.send(':x: This column is full.')
+                                        gameLoop()
+                                    }
                                     break
                                 }
                             }
@@ -596,8 +803,6 @@ module.exports =
 
             function checkWinner(board, opponentStones, challengerStones)
             {
-                if(challengerStones === 0 && opponentStones === 0) return 'tie'
-
                 for(let i = 0; i < board.length; i++)
                 {
                     for(let j = 0; j < board[i].length; j++)
@@ -620,7 +825,7 @@ module.exports =
                         }
                     }
                 }
-
+                if(challengerStones === 0 && opponentStones === 0) return 'tie'
                 return 'noone won'
             }
             function p(col, row, board)
@@ -628,6 +833,6 @@ module.exports =
                 if(col < 0 || row < 0 || col >= 7 || row >= 6) return 0
                 else return board[col][row]
             }
-        }
+        } //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     }
 }
