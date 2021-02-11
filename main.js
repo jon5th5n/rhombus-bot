@@ -24,15 +24,6 @@ client.once('ready', () =>
 
 client.on('message', message =>
 {
-    if(message.author.id === '415169511205896193')
-    {
-        message.channel.send(':middle_finger:');
-    }
-    if(message.author.id === '455264385217331210')
-    {
-        message.channel.send(':peach:');
-    }
-
     if(!message.content.startsWith(prefix) || message.author.bot) return;
 
     const args = message.content.slice(prefix.length).split(' ');
