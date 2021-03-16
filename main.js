@@ -75,10 +75,18 @@ client.on('message', message =>
     }
 });
 
+client.on('guildMemberAdd', member => {
+    if(member.guild.id == '480065595724005376')
+    {
+        member.roles.add('704277476033167412');
+    }
+});
 
 
 
 
 
 
-client.login(process.env.token);
+
+// client.login(process.env.token);
+client.login('NzkxMzAyODY2NTA5ODg5NTg3.X-NMOQ.Bp2_SI4ktHaZnZiE-WHS-okRtHw');
