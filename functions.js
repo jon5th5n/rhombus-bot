@@ -83,6 +83,15 @@ module.exports =
         })
     },
 
+    catchMessage: (channel, filter, client) => {
+        return new Promise((resolve, reject) => {
+            client.on('message', message => {
+                if(message.channel === channel && filter(message)) resolve(message);
+                // if(message.channel === channel) reject(`\'${message.content}\' didn't pass the filter.`);
+            });
+        });
+    },
+
     randomInt: function(min, max)
     {
         return Math.floor(Math.random() * (max - min + 1) ) + min;

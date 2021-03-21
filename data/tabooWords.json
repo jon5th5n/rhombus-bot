@@ -1,0 +1,534 @@
+[
+    {
+        "word" : "Magenta",
+        "taboo1" : "Pink",
+        "taboo2" : "Lila",
+        "taboo3" : "Telekom",
+        "taboo4" : "Farbe"
+    },
+    {
+        "word" : "Informatiker",
+        "taboo1" : "Computer",
+        "taboo2" : "Programmieren",
+        "taboo3" : "Hardware",
+        "taboo4" : "Software"
+    },
+    {
+        "word" : "Damenschneiderin",
+        "taboo1" : "Kleider",
+        "taboo2" : "Nähen",
+        "taboo3" : "Stoffe",
+        "taboo4" : "Nähmaschine"
+    },
+    {
+        "word" : "Maurer",
+        "taboo1" : "Steine",
+        "taboo2" : "Baustelle",
+        "taboo3" : "Zement",
+        "taboo4" : "Bauen"
+    },
+    {
+        "word" : "Tischtuch",
+        "taboo1" : "Essen",
+        "taboo2" : "Decke",
+        "taboo3" : "Mahlzeit",
+        "taboo4" : "Stoff"
+    },
+    {
+        "word" : "Fernseher",
+        "taboo1" : "Fernseher",
+        "taboo2" : "Nachrichten",
+        "taboo3" : "Schauen",
+        "taboo4" : "Film"
+    },
+    {
+        "word" : "Hühnerleiter",
+        "taboo1" : "Hahn",
+        "taboo2" : "Ei",
+        "taboo3" : "Gackern",
+        "taboo4" : "Massentierhaltung"
+    },
+    {
+        "word" : "Geist",
+        "taboo1" : "Schloss",
+        "taboo2" : "Gespenst",
+        "taboo3" : "Fasnacht",
+        "taboo4" : "Verkleidung"
+    },
+    {
+        "word" : "Bremsscheibe",
+        "taboo1" : "Auto",
+        "taboo2" : "Reifen",
+        "taboo3" : "Unfall",
+        "taboo4" : "Kaputt"
+    },
+    {
+        "word" : "Gynäkologe",
+        "taboo1" : "Frauenarzt",
+        "taboo2" : "Schwanger",
+        "taboo3" : "Untersuchung",
+        "taboo4" : "Weibliches Geschlechtsorgan"
+    },
+    {
+        "word" : "Buchbinder",
+        "taboo1" : "Beruf",
+        "taboo2" : "Umschlag",
+        "taboo3" : "Selten",
+        "taboo4" : "Bücherei"
+    },
+    {
+        "word" : "Autoverkäufer",
+        "taboo1" : "Gebaruchtwagen",
+        "taboo2" : "Geld",
+        "taboo3" : "Beruf",
+        "taboo4" : "Handel"
+    },
+    {
+        "word" : "Bootsbauer",
+        "taboo1" : "Angeln",
+        "taboo2" : "Beruf",
+        "taboo3" : "Handwerk",
+        "taboo4" : "Industriell"
+    },
+    {
+        "word" : "Hausfrau",
+        "taboo1" : "Familie",
+        "taboo2" : "Beruf",
+        "taboo3" : "Haushalt",
+        "taboo4" : "Erziehung"
+    },
+    {
+        "word" : "Imker",
+        "taboo1" : "Honig",
+        "taboo2" : "Biene",
+        "taboo3" : "Produktion",
+        "taboo4" : "Rauch"
+    },
+    {
+        "word" : "Auto",
+        "taboo1" : "Fahren",
+        "taboo2" : "Wagen",
+        "taboo3" : "Reifen",
+        "taboo4" : "Transport"
+    },
+    {
+        "word" : "Vase",
+        "taboo1" : "Blumen",
+        "taboo2" : "Erde",
+        "taboo3" : "Keramik",
+        "taboo4" : "Dekoration"
+    },
+    {
+        "word" : "Anzug",
+        "taboo1" : "Hosen",
+        "taboo2" : "Jacke",
+        "taboo3" : "Anziehen",
+        "taboo4" : "Kleidungsstück"
+    },
+    {
+        "word" : "Arzt",
+        "taboo1" : "Krankheit",
+        "taboo2" : "Patient",
+        "taboo3" : "Krankenhaus",
+        "taboo4" : "Verletzung"
+    },
+    {
+        "word" : "Wein",
+        "taboo1" : "Trinken",
+        "taboo2" : "Flasche",
+        "taboo3" : "Rot",
+        "taboo4" : "Korken"
+    },
+    {
+        "word" : "Schule",
+        "taboo1" : "Stundent",
+        "taboo2" : "Lehrer",
+        "taboo3" : "Lernen",
+        "taboo4" : "Gefängnis"
+    },
+    {
+        "word" : "Paris",
+        "taboo1" : "Eifelturm",
+        "taboo2" : "Frankreich",
+        "taboo3" : "Hauptstadt",
+        "taboo4" : "Baguette"
+    },
+    {
+        "word" : "Spülbecken",
+        "taboo1" : "Spülen",
+        "taboo2" : "Geschirr",
+        "taboo3" : "Küche",
+        "taboo4" : "Spüllmittel"
+    },
+    {
+        "word" : "Sofa",
+        "taboo1" : "Sitzen",
+        "taboo2" : "Wohnzimmer",
+        "taboo3" : "MÖbelstück",
+        "taboo4" : "Porno"
+    },
+    {
+        "word" : "Tomate",
+        "taboo1" : "Gemüsen",
+        "taboo2" : "Rot",
+        "taboo3" : "Rund",
+        "taboo4" : "Salat"
+    },
+    {
+        "word" : "Park",
+        "taboo1" : "Gras",
+        "taboo2" : "Baum",
+        "taboo3" : "Banken",
+        "taboo4" : "Picknick"
+    },
+    {
+        "word" : "Handy",
+        "taboo1" : "Social Media",
+        "taboo2" : "Telefonieren",
+        "taboo3" : "Schreiben",
+        "taboo4" : "Gerät"
+    },
+    {
+        "word" : "Kino",
+        "taboo1" : "Film",
+        "taboo2" : "Popcorn",
+        "taboo3" : "Teuer",
+        "taboo4" : "Date"
+    },
+    {
+        "word" : "London",
+        "taboo1" : "Hauptstadt",
+        "taboo2" : "England",
+        "taboo3" : "Big Ben",
+        "taboo4" : "Königin"
+    },
+    {
+        "word" : "Zahnarzt",
+        "taboo1" : "Karies",
+        "taboo2" : "Mund",
+        "taboo3" : "Angst",
+        "taboo4" : "bohren"
+    },
+    {
+        "word" : "Schokolade",
+        "taboo1" : "Essen",
+        "taboo2" : "Kakao",
+        "taboo3" : "Süß",
+        "taboo4" : "Tafel"
+    },
+    {
+        "word" : "Foto",
+        "taboo1" : "Album",
+        "taboo2" : "Bild",
+        "taboo3" : "Kamera",
+        "taboo4" : "Ferien"
+    },
+    {
+        "word" : "Fernseher",
+        "taboo1" : "Sehen",
+        "taboo2" : "Programm",
+        "taboo3" : "Kanäle",
+        "taboo4" : "Kiste"
+    },
+    {
+        "word" : "Hund",
+        "taboo1" : "Haustier",
+        "taboo2" : "Knochen",
+        "taboo3" : "Beißen",
+        "taboo4" : "Essen"
+    },
+    {
+        "word" : "Supermarkt",
+        "taboo1" : "Geschäft",
+        "taboo2" : "Essen",
+        "taboo3" : "Einkaufszentrum",
+        "taboo4" : "Kaufen"
+    },
+    {
+        "word" : "Reisepass",
+        "taboo1" : "Ausländer",
+        "taboo2" : "Foto",
+        "taboo3" : "Indentifizieren",
+        "taboo4" : "Vorzeigen"
+    },
+    {
+        "word" : "Apfel",
+        "taboo1" : "Obst",
+        "taboo2" : "Knackig",
+        "taboo3" : "Essen",
+        "taboo4" : "Mehrfarbig"
+    },
+    {
+        "word" : "KIssen",
+        "taboo1" : "Schlafen",
+        "taboo2" : "Bett",
+        "taboo3" : "Kopf",
+        "taboo4" : "Temperaturunterschied"
+    },
+    {
+        "word" : "Pilot",
+        "taboo1" : "FLugzeug",
+        "taboo2" : "Beruf",
+        "taboo3" : "Fliegen",
+        "taboo4" : "Reisen"
+    },
+    {
+        "word" : "Volleyball",
+        "taboo1" : "Speilen",
+        "taboo2" : "Mannschaft",
+        "taboo3" : "Ball",
+        "taboo4" : "Sport"
+    },
+    {
+        "word" : "New York",
+        "taboo1" : "USA",
+        "taboo2" : "Hauptstadt",
+        "taboo3" : "Empire State Building",
+        "taboo4" : "Trump"
+    },
+    {
+        "word" : "Füller",
+        "taboo1" : "Schreiben",
+        "taboo2" : "Tinte",
+        "taboo3" : "Blatt/Papier",
+        "taboo4" : "Nachfüllen"
+    },
+    {
+        "word" : "Restaurant",
+        "taboo1" : "Abendessen",
+        "taboo2" : "Lokal",
+        "taboo3" : "Familie",
+        "taboo4" : "Bezahlen"
+    },
+    {
+        "word" : "Radio",
+        "taboo1" : "Musik",
+        "taboo2" : "Gerät",
+        "taboo3" : "Auto",
+        "taboo4" : "Zuhörer"
+    },
+    {
+        "word" : "Tasse",
+        "taboo1" : "Henkel",
+        "taboo2" : "Tee",
+        "taboo3" : "Pozellan",
+        "taboo4" : "Kaffee"
+    },
+    {
+        "word" : "Kirsche",
+        "taboo1" : "Obst",
+        "taboo2" : "Kern",
+        "taboo3" : "Rot",
+        "taboo4" : "Süß"
+    },
+    {
+        "word" : "Puzzle",
+        "taboo1" : "Teile",
+        "taboo2" : "Bild",
+        "taboo3" : "Rätsel",
+        "taboo4" : "passend"
+    },
+    {
+        "word" : "Robin Hood",
+        "taboo1" : "Räuber",
+        "taboo2" : "Pfeil",
+        "taboo3" : "Kinderfilmheld",
+        "taboo4" : "Mütze"
+    },
+    {
+        "word" : "Kreide",
+        "taboo1" : "Tafel",
+        "taboo2" : "Lehrer",
+        "taboo3" : "Schule",
+        "taboo4" : "Weiß"
+    },
+    {
+        "word" : "Pudelmütze",
+        "taboo1" : "Bommel",
+        "taboo2" : "Stricken",
+        "taboo3" : "Oma",
+        "taboo4" : "Kopf"
+    },
+    {
+        "word" : "Taschenuhr",
+        "taboo1" : "Zeit",
+        "taboo2" : "Kette",
+        "taboo3" : "Aufklappen",
+        "taboo4" : "Altmodisch"
+    },
+    {
+        "word" : "Keks",
+        "taboo1" : "Süß",
+        "taboo2" : "Gebäck",
+        "taboo3" : "Butter",
+        "taboo4" : "Schokolade"
+    },
+    {
+        "word" : "Schlange",
+        "taboo1" : "Reptil",
+        "taboo2" : "Giftzahn",
+        "taboo3" : "Züngeln",
+        "taboo4" : "Verschlingen"
+    },
+    {
+        "word" : "Sohn",
+        "taboo1" : "Kind",
+        "taboo2" : "Bruder",
+        "taboo3" : "Junge",
+        "taboo4" : "Eltern"
+    },
+    {
+        "word" : "Gemälde",
+        "taboo1" : "Rahmen",
+        "taboo2" : "Museum",
+        "taboo3" : "Bild",
+        "taboo4" : "Farbe"
+    },
+    {
+        "word" : "Papier",
+        "taboo1" : "Blatt",
+        "taboo2" : "Weiß",
+        "taboo3" : "Block",
+        "taboo4" : "Holz"
+    },
+    {
+        "word" : "Würfel",
+        "taboo1" : "Werfen",
+        "taboo2" : "Quadrat",
+        "taboo3" : "Spiel",
+        "taboo4" : "Seiten"
+    },
+    {
+        "word" : "Birne",
+        "taboo1" : "Obst/Frucht",
+        "taboo2" : "Licht",
+        "taboo3" : "Schnaps",
+        "taboo4" : "Elektro"
+    },
+    {
+        "word" : "Eis",
+        "taboo1" : "Wasser",
+        "taboo2" : "Gefroren",
+        "taboo3" : "Schlittschuh",
+        "taboo4" : "Schmelzen"
+    },
+    {
+        "word" : "Hebamme",
+        "taboo1" : "Baby",
+        "taboo2" : "Geburt",
+        "taboo3" : "Schwanger",
+        "taboo4" : "Kreissaal"
+    },
+    {
+        "word" : "Hausarzt",
+        "taboo1" : "Praxis",
+        "taboo2" : "Medizin",
+        "taboo3" : "Untersuchung",
+        "taboo4" : "Patient"
+    },
+    {
+        "word" : "Nonne",
+        "taboo1" : "Religiös",
+        "taboo2" : "Kloster",
+        "taboo3" : "Jungfräulichkeit",
+        "taboo4" : "Schule"
+    },
+    {
+        "word" : "Messer",
+        "taboo1" : "Kochen",
+        "taboo2" : "Schneiden",
+        "taboo3" : "Abstechen",
+        "taboo4" : "Waffe"
+    },
+    {
+        "word" : "Stempel",
+        "taboo1" : "Post",
+        "taboo2" : "Siegel",
+        "taboo3" : "Wachs",
+        "taboo4" : "Aufdrücken"
+    },
+    {
+        "word" : "Stiefel",
+        "taboo1" : "Fuß",
+        "taboo2" : "Schuh",
+        "taboo3" : "Leder",
+        "taboo4" : "Winter"
+    },
+    {
+        "word" : "Babysitter",
+        "taboo1" : "Ausgehen",
+        "taboo2" : "Beruf",
+        "taboo3" : "Geld",
+        "taboo4" : "Eltern"
+    },
+    {
+        "word" : "Wecker",
+        "taboo1" : "Uhr",
+        "taboo2" : "Laut",
+        "taboo3" : "Aufwecken",
+        "taboo4" : "Schlaf"
+    },
+    {
+        "word" : "Zwiebel",
+        "taboo1" : "Weinen",
+        "taboo2" : "Kochen",
+        "taboo3" : "Essen",
+        "taboo4" : "Schneiden"
+    },
+    {
+        "word" : "Staubsauger",
+        "taboo1" : "Teppich",
+        "taboo2" : "Filter",
+        "taboo3" : "Gerät",
+        "taboo4" : "Elektrisch"
+    },
+    {
+        "word" : "Postleitzahl",
+        "taboo1" : "Adresse",
+        "taboo2" : "Zahl",
+        "taboo3" : "Brief",
+        "taboo4" : "Ortschaft"
+    },
+    {
+        "word" : "Zwilling",
+        "taboo1" : "Geschwister",
+        "taboo2" : "Geburtstag",
+        "taboo3" : "Gleichaltrig",
+        "taboo4" : "Eltern"
+    },
+    {
+        "word" : "Hand",
+        "taboo1" : "Finger",
+        "taboo2" : "Arm",
+        "taboo3" : "Greifen",
+        "taboo4" : "Wichsen"
+    },
+    {
+        "word" : "Kühlschrank",
+        "taboo1" : "Kalt",
+        "taboo2" : "Eis",
+        "taboo3" : "Fach",
+        "taboo4" : "Lebensmittel"
+    },
+    {
+        "word" : "KLavier",
+        "taboo1" : "KLassisch",
+        "taboo2" : "Instrument",
+        "taboo3" : "Tasten",
+        "taboo4" : "Piano"
+    },
+    {
+        "word" : "skifahren",
+        "taboo1" : "Schnee",
+        "taboo2" : "Melchsee",
+        "taboo3" : "Winter",
+        "taboo4" : "Sport"
+    },
+    {
+        "word" : "Taboo",
+        "taboo1" : "Spielen",
+        "taboo2" : "Jetzt",
+        "taboo3" : "Bot",
+        "taboo4" : "Wörter"
+    }
+]

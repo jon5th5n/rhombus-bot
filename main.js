@@ -1,11 +1,10 @@
 const { memory } = require('console');
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const wiki = require('wikijs').default
 
 const { mentionIsRole, mentionToId, idToMention, isMention, whiteFrameNumber, calculateSumInScope, seperateNumber, formatString } = require('./functions');
 
-const prefix = '#';
+const prefix = '~';
 
 const fs = require('fs');
 client.commands = new Discord.Collection();
@@ -73,6 +72,18 @@ client.on('message', message =>
     {
         client.commands.get('random').execute(message, args);
     }
+    else if(instruction == 'taboo')
+    {
+        client.commands.get('taboo').execute(message, args, client, Discord);
+    }
+    else if(instruction == 'say')
+    {
+        client.commands.get('say').execute(message, args, client, Discord);
+    }
+    else if(instruction == 'write')
+    {
+        client.commands.get('write').execute(message, args, client, Discord);
+    }
 });
 
 client.on('guildMemberAdd', member => {
@@ -88,4 +99,5 @@ client.on('guildMemberAdd', member => {
 
 
 
-client.login(process.env.token);
+// client.login(process.env.token);
+client.login('NzkxMzAyODY2NTA5ODg5NTg3.X-NMOQ.S7rJvw8XRoSgfeAp9hIvwrLYGTs');

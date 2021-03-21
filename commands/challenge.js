@@ -262,7 +262,7 @@ module.exports =
                     try
                     {
                         const answer = await catchMessageFrom(opponent, message.guild.id, client)
-                        if(answer === 'yes')
+                        if(answer.toLowerCase() === 'yes')
                         {
                             message.channel.send('The challenge got accepted!')
                             startTicTacToe()
@@ -658,7 +658,7 @@ module.exports =
                     try
                     {
                         const answer = await catchMessageFrom(opponent, message.guild.id, client)
-                        if(answer === 'yes')
+                        if(answer.toLowerCase() === 'yes')
                         {
                             message.channel.send('The challenge got accepted!')
                             startConnectFour()
