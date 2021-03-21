@@ -322,7 +322,7 @@ async function playGame(guildId, lobbyName, client)
         answer = await catchMessage(channel, (m) => m.content.toLowerCase() === '-start' && m.author.id === lobby.owner.id, client);
 
         // don't start if there are less then 2 player
-        if(lobby.players.length < 1) {
+        if(lobby.players.length < 2) {
             channel.send(':x: There have to be at least two players to start the game.');
             waitForGameStart();
             return;
