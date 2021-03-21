@@ -99,5 +99,4 @@ client.on('guildMemberAdd', member => {
 
 
 
-// client.login(process.env.token);
-client.login('NzkxMzAyODY2NTA5ODg5NTg3.X-NMOQ.S7rJvw8XRoSgfeAp9hIvwrLYGTs');
+client.login(process.env.token);
