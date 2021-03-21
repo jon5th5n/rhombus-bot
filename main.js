@@ -4,7 +4,7 @@ const client = new Discord.Client();
 
 const { mentionIsRole, mentionToId, idToMention, isMention, whiteFrameNumber, calculateSumInScope, seperateNumber, formatString } = require('./functions');
 
-const prefix = '~';
+const prefix = '#';
 
 const fs = require('fs');
 client.commands = new Discord.Collection();
