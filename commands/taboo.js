@@ -56,7 +56,7 @@ gameboards = {                 |        guildStats = {                          
 
 
 const fs = require('fs');
-const Discord = require('discord.js');;
+const Discord = require('discord.js');
 const { MessageCollector } = require('discord.js');
 const { mentionToId, idToMention, randomInt, catchMessage } = require('../functions');
 const tabooGames = require('../data/tabooGames');
@@ -239,6 +239,8 @@ module.exports =
     }
 }
 
+
+
 //== helper functions =======================================================================================================================================================================
 
 async function joinLobby(playerId, lobbyName, guild, errChannel, client)
@@ -304,7 +306,9 @@ async function addPlayer(playerId, lobby, guild, client)
     })
 }
 
-//== game loop ==============================================================================================================================================================================
+
+
+//== game ===================================================================================================================================================================================
 
 async function playGame(guildId, lobbyName, client)
 {
@@ -312,7 +316,7 @@ async function playGame(guildId, lobbyName, client)
     let lobby = tabooGames[guildId][lobbyName];
     const channel = await client.channels.fetch(lobby.channelId);
 
-    //== gameloop ===========================================================================================================================================================================
+    //== game loop ==========================================================================================================================================================================
 
     let answer;
 

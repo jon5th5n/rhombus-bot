@@ -7,6 +7,7 @@ const { mentionIsRole, mentionToId, idToMention, isMention, whiteFrameNumber, ca
 const prefix = '#';
 
 const fs = require('fs');
+const { finished } = require('stream');
 client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
 for(const file of commandFiles)
@@ -16,7 +17,7 @@ for(const file of commandFiles)
 }
 
 
-client.once('ready', () => 
+client.once('ready', async() => 
 {
     console.log('Bot is online!');
 });
