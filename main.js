@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const { memory } = require('console');
 const Discord = require('discord.js');
 const client = new Discord.Client();
@@ -100,4 +102,4 @@ client.on('guildMemberAdd', member => {
 
 
 
-client.login(process.env.token);
+client.login(process.env.TOKEN);
